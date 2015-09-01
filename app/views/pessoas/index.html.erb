@@ -1,0 +1,185 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pessoas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Saram</th>
+      <th>Antiguidade</th>
+      <th>Nome completo</th>
+      <th>Nome guerra</th>
+      <th>Imagem</th>
+      <th>Data nascimento</th>
+      <th>Posto graduacao</th>
+      <th>Especialidade</th>
+      <th>Situacao</th>
+      <th>Sispes</th>
+      <th>Identidade</th>
+      <th>Rarc</th>
+      <th>Cpf</th>
+      <th>Pispasep</th>
+      <th>Titulonum</th>
+      <th>Titulozona</th>
+      <th>Titulosecao</th>
+      <th>Titulocidade</th>
+      <th>Titulouf</th>
+      <th>Cnhnum</th>
+      <th>Cnhcat</th>
+      <th>Cnhvalidade</th>
+      <th>Om</th>
+      <th>Omanterior</th>
+      <th>Motivotransf</th>
+      <th>Localtrabalho</th>
+      <th>Turma</th>
+      <th>Tempoantano</th>
+      <th>Tempoantmes</th>
+      <th>Tempoantdia</th>
+      <th>Sexo</th>
+      <th>Religiao</th>
+      <th>Estadocivil</th>
+      <th>Tiposangue</th>
+      <th>Filpai</th>
+      <th>Filmae</th>
+      <th>Naturalcidade</th>
+      <th>Naturaluf</th>
+      <th>Endereco</th>
+      <th>Bairro</th>
+      <th>Numero</th>
+      <th>Cidade</th>
+      <th>Uf</th>
+      <th>Cep</th>
+      <th>Fone1</th>
+      <th>Fone2</th>
+      <th>Fonetrab</th>
+      <th>Fonetrabramal</th>
+      <th>Email</th>
+      <th>Funcao</th>
+      <th>Falert</th>
+      <th>Falertesquadrao</th>
+      <th>Escala</th>
+      <th>Livrobruxa</th>
+      <th>Comportamento</th>
+      <th>Banco</th>
+      <th>Agencia</th>
+      <th>Contacorrente</th>
+      <th>Obs</th>
+      <th>Tipo</th>
+      <th>User</th>
+      <th>Datacadastro</th>
+      <th>Cracha</th>
+      <th>Turnotrabalho</th>
+      <th>Cmt</th>
+      <th>Escala1</th>
+      <th>Login</th>
+      <th>Secao</th>
+      <th>Escala preta</th>
+      <th>Escala vermelha</th>
+      <th>Escala roxa</th>
+      <th>Escala amarela</th>
+      <th>Mostra niver</th>
+      <th>Cracha</th>
+      <th>Cracha validade</th>
+      <th>Vilaa</th>
+      <th>Escala receber email</th>
+      <th>Esqsec</th>
+      <th>Ass dispensa</th>
+      <th>Funcao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pessoas.each do |pessoa| %>
+      <tr>
+        <td><%= pessoa.saram %></td>
+        <td><%= pessoa.antiguidade %></td>
+        <td><%= pessoa.nome_completo %></td>
+        <td><%= pessoa.nome_guerra %></td>
+        <td><%= pessoa.imagem %></td>
+        <td><%= pessoa.data_nascimento %></td>
+        <td><%= pessoa.posto_graduacao %></td>
+        <td><%= pessoa.especialidade %></td>
+        <td><%= pessoa.situacao %></td>
+        <td><%= pessoa.sispes %></td>
+        <td><%= pessoa.identidade %></td>
+        <td><%= pessoa.rarc %></td>
+        <td><%= pessoa.cpf %></td>
+        <td><%= pessoa.pispasep %></td>
+        <td><%= pessoa.titulonum %></td>
+        <td><%= pessoa.titulozona %></td>
+        <td><%= pessoa.titulosecao %></td>
+        <td><%= pessoa.titulocidade %></td>
+        <td><%= pessoa.titulouf %></td>
+        <td><%= pessoa.cnhnum %></td>
+        <td><%= pessoa.cnhcat %></td>
+        <td><%= pessoa.cnhvalidade %></td>
+        <td><%= pessoa.om %></td>
+        <td><%= pessoa.omanterior %></td>
+        <td><%= pessoa.motivotransf %></td>
+        <td><%= pessoa.localtrabalho %></td>
+        <td><%= pessoa.turma %></td>
+        <td><%= pessoa.tempoantano %></td>
+        <td><%= pessoa.tempoantmes %></td>
+        <td><%= pessoa.tempoantdia %></td>
+        <td><%= pessoa.sexo %></td>
+        <td><%= pessoa.religiao %></td>
+        <td><%= pessoa.estadocivil %></td>
+        <td><%= pessoa.tiposangue %></td>
+        <td><%= pessoa.filpai %></td>
+        <td><%= pessoa.filmae %></td>
+        <td><%= pessoa.naturalcidade %></td>
+        <td><%= pessoa.naturaluf %></td>
+        <td><%= pessoa.endereco %></td>
+        <td><%= pessoa.bairro %></td>
+        <td><%= pessoa.numero %></td>
+        <td><%= pessoa.cidade %></td>
+        <td><%= pessoa.uf %></td>
+        <td><%= pessoa.cep %></td>
+        <td><%= pessoa.fone1 %></td>
+        <td><%= pessoa.fone2 %></td>
+        <td><%= pessoa.fonetrab %></td>
+        <td><%= pessoa.fonetrabramal %></td>
+        <td><%= pessoa.email %></td>
+        <td><%= pessoa.funcao %></td>
+        <td><%= pessoa.falert %></td>
+        <td><%= pessoa.falertesquadrao %></td>
+        <td><%= pessoa.escala %></td>
+        <td><%= pessoa.livrobruxa %></td>
+        <td><%= pessoa.comportamento %></td>
+        <td><%= pessoa.banco %></td>
+        <td><%= pessoa.agencia %></td>
+        <td><%= pessoa.contacorrente %></td>
+        <td><%= pessoa.obs %></td>
+        <td><%= pessoa.tipo %></td>
+        <td><%= pessoa.user %></td>
+        <td><%= pessoa.datacadastro %></td>
+        <td><%= pessoa.cracha %></td>
+        <td><%= pessoa.turnotrabalho %></td>
+        <td><%= pessoa.cmt %></td>
+        <td><%= pessoa.escala1 %></td>
+        <td><%= pessoa.login %></td>
+        <td><%= pessoa.secao %></td>
+        <td><%= pessoa.escala_preta %></td>
+        <td><%= pessoa.escala_vermelha %></td>
+        <td><%= pessoa.escala_roxa %></td>
+        <td><%= pessoa.escala_amarela %></td>
+        <td><%= pessoa.mostra_niver %></td>
+        <td><%= pessoa.cracha_id %></td>
+        <td><%= pessoa.cracha_validade %></td>
+        <td><%= pessoa.vilaa %></td>
+        <td><%= pessoa.escala_receber_email %></td>
+        <td><%= pessoa.esqsec_id %></td>
+        <td><%= pessoa.ass_dispensa %></td>
+        <td><%= pessoa.funcao_id %></td>
+        <td><%= link_to 'Show', pessoa %></td>
+        <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
+        <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pessoa', new_pessoa_path %>
