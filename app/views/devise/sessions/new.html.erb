@@ -1,26 +1,26 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :login %><br />
-    <%= f.text_field :login, autofocus: true %>
+<div class="pen-title">
+  <h1>GeMil</h1><span>Gestao de militares e civis | Desenvolvido por <a href=''>3S Ricardo Souza</a></span>
+</div>
+<div class="module form-module">
+  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+    <div class="tooltip">Duvidas?</div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="form">
+    <h2>Conexao LDAP</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.text_field :login, autofocus: true, :placeholder => 'Login' %>
+      <%= f.password_field :password, autocomplete: "off", :placeholder => 'Senha' %>
+      <div class="actions">
+      <%= f.submit "Conectar", :class => 'submit' %>
+      </div>
+      
+    <% end %>
   </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Conectar ao GeMil" %>
+  <div class="form">
+    <p>Duvidas gerais</p>
   </div>
-<% end %>
+  
+  <div class="cta"><a href="http://">Esqueceu sua senha?</a></div>
+</div>
 
 <%= render "devise/shared/links" %>
