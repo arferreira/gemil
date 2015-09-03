@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Specialties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Espdesc</th>
+      <th>Espabrev</th>
+      <th>Espcodigo</th>
+      <th>Espgrupo1</th>
+      <th>Espgrupo2</th>
+      <th>Espid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specialties.each do |specialty| %>
+      <tr>
+        <td><%= specialty.espdesc %></td>
+        <td><%= specialty.espabrev %></td>
+        <td><%= specialty.espcodigo %></td>
+        <td><%= specialty.espgrupo1 %></td>
+        <td><%= specialty.espgrupo2 %></td>
+        <td><%= specialty.espid %></td>
+        <td><%= link_to 'Show', specialty %></td>
+        <td><%= link_to 'Edit', edit_specialty_path(specialty) %></td>
+        <td><%= link_to 'Destroy', specialty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Specialty', new_specialty_path %>

@@ -6,8 +6,9 @@ one:
   nome_completo: MyString
   nome_guerra: MyString
   imagem: MyString
-  data_nascimento: 2015-09-01
+  data_nascimento: 2015-09-02
   posto_graduacao_id: 
+  quadro_id: 
   especialidade_id: 
   situacao: 1
   sispes: MyString
@@ -22,7 +23,7 @@ one:
   titulouf: MyString
   cnhnum: MyString
   cnhcat: MyString
-  cnhvalidade: 2015-09-01
+  cnhvalidade: 2015-09-02
   om: 1
   omanterior: 1
   motivotransf: MyString
@@ -62,7 +63,7 @@ one:
   obs: MyText
   tipo: MyString
   user: 1
-  datacadastro: 2015-09-01
+  datacadastro: 2015-09-02
   cracha: 1
   turnotrabalho: 1
   cmt: 1
@@ -75,7 +76,7 @@ one:
   escala_amarela: 1
   mostra_niver: false
   cracha_id: 1
-  cracha_validade: 2015-09-01
+  cracha_validade: 2015-09-02
   vilaa: 1
   escala_receber_email: 1
   esqsec_id: 1
@@ -88,8 +89,9 @@ two:
   nome_completo: MyString
   nome_guerra: MyString
   imagem: MyString
-  data_nascimento: 2015-09-01
+  data_nascimento: 2015-09-02
   posto_graduacao_id: 
+  quadro_id: 
   especialidade_id: 
   situacao: 1
   sispes: MyString
@@ -104,7 +106,7 @@ two:
   titulouf: MyString
   cnhnum: MyString
   cnhcat: MyString
-  cnhvalidade: 2015-09-01
+  cnhvalidade: 2015-09-02
   om: 1
   omanterior: 1
   motivotransf: MyString
@@ -144,7 +146,7 @@ two:
   obs: MyText
   tipo: MyString
   user: 1
-  datacadastro: 2015-09-01
+  datacadastro: 2015-09-02
   cracha: 1
   turnotrabalho: 1
   cmt: 1
@@ -157,7 +159,7 @@ two:
   escala_amarela: 1
   mostra_niver: false
   cracha_id: 1
-  cracha_validade: 2015-09-01
+  cracha_validade: 2015-09-02
   vilaa: 1
   escala_receber_email: 1
   esqsec_id: 1

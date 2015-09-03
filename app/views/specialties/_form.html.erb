@@ -1,0 +1,41 @@
+<%= form_for(@specialty) do |f| %>
+  <% if @specialty.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@specialty.errors.count, "error") %> prohibited this specialty from being saved:</h2>
+
+      <ul>
+      <% @specialty.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :espdesc %><br>
+    <%= f.text_field :espdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :espabrev %><br>
+    <%= f.text_field :espabrev %>
+  </div>
+  <div class="field">
+    <%= f.label :espcodigo %><br>
+    <%= f.text_field :espcodigo %>
+  </div>
+  <div class="field">
+    <%= f.label :espgrupo1 %><br>
+    <%= f.number_field :espgrupo1 %>
+  </div>
+  <div class="field">
+    <%= f.label :espgrupo2 %><br>
+    <%= f.text_field :espgrupo2 %>
+  </div>
+  <div class="field">
+    <%= f.label :espid %><br>
+    <%= f.number_field :espid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,2 +1,61 @@
-<h1>Manage#index</h1>
-<p>Find me in app/views/manage/index.html.erb</p>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">GeMil</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=  %><i class="fa fa-user"></i> <%=  %> </a>
+                   
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <%= link_to('Militar', pessoas_path) %>
+                    </li>
+                    <li>
+                        <%= link_to('Dependentes', dependents_path) %>
+                    </li>
+                    <li>
+                    	<%= link_to('Sair do GeMil', destroy_user_session_path, :method => :delete) %>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <!-- Fim Menu -->
+      <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+
+       
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+ 
+<script type="text/javascript">
+$('#mov').hide();
+$('input#entrada').on('click', function (event) {
+         $('input#saida').value('');
+   });
+$('input#saida').on('click', function (event) {
+         $('input#entrada').value('');
+   });
+</script>

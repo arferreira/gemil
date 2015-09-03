@@ -18,6 +18,19 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'devise_ldap_authenticatable'
 
+#paginaç~ao
+gem 'will_paginate'
+
+# Busca
+gem 'ransack'
+
+# Upload de fotos
+gem 'carrierwave'
+
+# Brazil ate o talo
+gem 'brazilian-rails'
+
+gem 'rails-i18n', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

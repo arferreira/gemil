@@ -1,0 +1,97 @@
+<%= form_for(@dependent) do |f| %>
+  <% if @dependent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dependent.errors.count, "error") %> prohibited this dependent from being saved:</h2>
+
+      <ul>
+      <% @dependent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pesdepnome %><br>
+    <%= f.text_field :pesdepnome %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepgrau %><br>
+    <%= f.number_field :pesdepgrau %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepsexo %><br>
+    <%= f.text_field :pesdepsexo %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepdn %><br>
+    <%= f.date_select :pesdepdn %>
+  </div>
+  <div class="field">
+    <%= f.label :pescodigo %><br>
+    <%= f.text_field :pescodigo %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepboletimnum %><br>
+    <%= f.text_field :pesdepboletimnum %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepboletimdata %><br>
+    <%= f.date_select :pesdepboletimdata %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepompub %><br>
+    <%= f.number_field :pesdepompub %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepradionum %><br>
+    <%= f.text_field :pesdepradionum %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepradiodata %><br>
+    <%= f.date_select :pesdepradiodata %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepirrf %><br>
+    <%= f.number_field :pesdepirrf %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdeptiposaram %><br>
+    <%= f.text_field :pesdeptiposaram %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdeptipo %><br>
+    <%= f.text_field :pesdeptipo %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepuser %><br>
+    <%= f.number_field :pesdepuser %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepdatacad %><br>
+    <%= f.date_select :pesdepdatacad %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepid %><br>
+    <%= f.number_field :pesdepid %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdeppesid %><br>
+    <%= f.number_field :pesdeppesid %>
+  </div>
+  <div class="field">
+    <%= f.label :pesdepdatacas %><br>
+    <%= f.date_select :pesdepdatacas %>
+  </div>
+  <div class="field">
+    <%= f.label :pes_cracha_id %><br>
+    <%= f.number_field :pes_cracha_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pes_cracha_val %><br>
+    <%= f.date_select :pes_cracha_val %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

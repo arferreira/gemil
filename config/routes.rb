@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
  
 
+  resources :dependents
+  resources :dependents
+  resources :situations
+  resources :frames
+  resources :graduations
+  resources :specialties
+  resources :people
+  resources :pessoas
+  resources :quadros
   resources :pessoas
   resources :especialidades
   resources :posto_graduacaos

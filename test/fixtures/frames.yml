@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quadrodesc: MyString
+  quadroabrev: MyString
+  quadrogrupo: 1
+  quadroid: 1
+
+two:
+  quadrodesc: MyString
+  quadroabrev: MyString
+  quadrogrupo: 1
+  quadroid: 1

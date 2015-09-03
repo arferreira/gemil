@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Frames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quadrodesc</th>
+      <th>Quadroabrev</th>
+      <th>Quadrogrupo</th>
+      <th>Quadroid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @frames.each do |frame| %>
+      <tr>
+        <td><%= frame.quadrodesc %></td>
+        <td><%= frame.quadroabrev %></td>
+        <td><%= frame.quadrogrupo %></td>
+        <td><%= frame.quadroid %></td>
+        <td><%= link_to 'Show', frame %></td>
+        <td><%= link_to 'Edit', edit_frame_path(frame) %></td>
+        <td><%= link_to 'Destroy', frame, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Frame', new_frame_path %>

@@ -1,0 +1,72 @@
+ <div class="container-fluid">
+<br />
+<% if notice%>
+<p id="notice" class="alert alert-warning"><%= notice %></p>
+<% end %>
+  <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> MILITARES</h3>
+                            </div>
+                            <div class="panel-body">
+                             <div class="table-responsive">
+<table class="table table-bordered table-hover table-striped">
+  <div class="form-group has-success">
+  <%= search_form_for @q do |f| %>
+  <%= f.label "Busca", :class => 'control-label' %><br />
+  <%= f.search_field :saram_cont, :placeholder => 'Informe o Saram', :class => 'form-control'  %> <br />
+  <%= f.submit "Buscar", :class => 'btn btn-success', :style => 'float:right;' %><br />
+  <% end %>
+</div>
+  <br />
+  <thead>
+    <tr>
+      <th>Saram</th>
+      <th>Antiguidade</th>
+      <th>Nome completo</th>
+      <th>Nome guerra</th>
+      <th>Cracha</th>
+      <th>Posto graduacao</th>
+      <th>Especialidade</th>
+      <th>Situacao</th>
+      
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= person.saram %></td>
+        <td><%= person.antiguidade %></td>
+        <td><%= person.nome_completo %></td>
+        <td><%= person.nome_guerra %></td>
+        <td><%= person.cracha_id %></td>
+        <% graduation = Graduation.where(:pgid => person.posto_graduacao).first %>
+        <td><%= graduation.pgabrev %></td>
+        <% specialty = Specialty.where(:espid => person.especialidade).first %>
+        <td><%= specialty.espabrev %></td>
+        <% situation = Situation.where(:situacaoid => person.situacao).first %>
+        <td><%= situation.situacaodesc %></td>
+        
+        
+        <td><%= link_to 'Editar', edit_person_path(person) %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+<center><%= will_paginate @people, :previous_label => "&laquo; Anterior", :next_label => "Próxima &raquo;", :page_gap => "......" %></center><br />
+<%= link_to 'Novo Militar', new_person_path, :class => 'btn btn-success' %>
+                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+</div>

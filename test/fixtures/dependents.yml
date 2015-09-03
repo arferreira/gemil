@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pesdepnome: MyString
+  pesdepgrau: 1
+  pesdepsexo: MyString
+  pesdepdn: 2015-09-02
+  pescodigo: MyString
+  pesdepboletimnum: MyString
+  pesdepboletimdata: 2015-09-02
+  pesdepompub: 1
+  pesdepradionum: MyString
+  pesdepradiodata: 2015-09-02
+  pesdepirrf: 1
+  pesdeptiposaram: MyString
+  pesdeptipo: MyString
+  pesdepuser: 1
+  pesdepdatacad: 2015-09-02
+  pesdepid: 1
+  pesdeppesid: 1
+  pesdepdatacas: 2015-09-02
+  pes_cracha_id: 1
+  pes_cracha_val: 2015-09-02
+
+two:
+  pesdepnome: MyString
+  pesdepgrau: 1
+  pesdepsexo: MyString
+  pesdepdn: 2015-09-02
+  pescodigo: MyString
+  pesdepboletimnum: MyString
+  pesdepboletimdata: 2015-09-02
+  pesdepompub: 1
+  pesdepradionum: MyString
+  pesdepradiodata: 2015-09-02
+  pesdepirrf: 1
+  pesdeptiposaram: MyString
+  pesdeptipo: MyString
+  pesdepuser: 1
+  pesdepdatacad: 2015-09-02
+  pesdepid: 1
+  pesdeppesid: 1
+  pesdepdatacas: 2015-09-02
+  pes_cracha_id: 1
+  pes_cracha_val: 2015-09-02

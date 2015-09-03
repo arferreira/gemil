@@ -1,0 +1,33 @@
+<%= form_for(@frame) do |f| %>
+  <% if @frame.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@frame.errors.count, "error") %> prohibited this frame from being saved:</h2>
+
+      <ul>
+      <% @frame.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quadrodesc %><br>
+    <%= f.text_field :quadrodesc %>
+  </div>
+  <div class="field">
+    <%= f.label :quadroabrev %><br>
+    <%= f.text_field :quadroabrev %>
+  </div>
+  <div class="field">
+    <%= f.label :quadrogrupo %><br>
+    <%= f.number_field :quadrogrupo %>
+  </div>
+  <div class="field">
+    <%= f.label :quadroid %><br>
+    <%= f.number_field :quadroid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

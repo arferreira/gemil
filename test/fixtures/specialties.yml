@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  espdesc: MyString
+  espabrev: MyString
+  espcodigo: MyString
+  espgrupo1: 1
+  espgrupo2: MyString
+  espid: 1
+
+two:
+  espdesc: MyString
+  espabrev: MyString
+  espcodigo: MyString
+  espgrupo1: 1
+  espgrupo2: MyString
+  espid: 1

@@ -1,0 +1,189 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="col-lg-6">
+  <legend>Dados Pessoais</legend>
+  <div class="field">
+    <%= f.label :saram %><br>
+    <%= f.text_field :saram %>
+  </div>
+  <div class="field">
+    <%= f.label :antiguidade %><br>
+    <%= f.number_field :antiguidade %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_completo %><br>
+    <%= f.text_field :nome_completo %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_guerra %><br>
+    <%= f.text_field :nome_guerra %>
+  </div>
+  <div class="field">
+    <%= f.label :foto %><br>
+    <%= f.file_field :imagem %>
+  </div>
+  <div class="field">
+    <%= f.label :data_nascimento %><br>
+    <%= f.date_select :data_nascimento %>
+  </div>
+  <div class="field">
+    <%= f.label "Posto/Graduaçao" %><br>
+    <%= f.number_field :posto_graduacao %>
+  </div>
+  <div class="field">
+    <%= f.label :quadro %><br>
+    <%= f.number_field :quadro %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidade %><br>
+    <%= f.number_field :especialidade %>
+  </div>
+  <div class="field">
+    <%= f.label :situacao %><br>
+    <%= f.number_field :situacao %>
+  </div>
+
+  <div class="field">
+    <%= f.label :identidade %><br>
+    <%= f.text_field :identidade %>
+  </div>
+
+  <div class="field">
+    <label>CPF</label><br>
+    <%= f.text_field :cpf %>
+  </div>
+    <div class="field">
+    <%= f.label "Telefone 1" %><br>
+    <%= f.text_field :fone1 %>
+  </div>
+  <div class="field">
+    <%= f.label "Telefone 2" %><br>
+    <%= f.text_field :fone2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sexo %><br>
+    <%= f.text_field :sexo %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Tipo Sanguineo" %><br>
+    <%= f.number_field :tiposangue %>
+  </div>
+  <div class="field">
+    <%= f.label "Filiaçao pai" %><br>
+    <%= f.text_field :filpai %>
+  </div>
+  <div class="field">
+    <%= f.label "Filiaçao Mae" %><br>
+    <%= f.text_field :filmae %>
+  </div>
+<legend>Dados CNH</legend>
+  <div class="field">
+    <%= f.label "Numero CNH" %><br>
+    <%= f.text_field :cnhnum %>
+  </div>
+  <div class="field">
+    <%= f.label "Categoria CNH" %><br>
+    <%= f.text_field :cnhcat %>
+  </div>
+  <div class="field">
+    <%= f.label "Validade CNH" %><br>
+    <%= f.date_select :cnhvalidade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :om %><br>
+    <%= f.number_field :om %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Local de Trabalho" %><br>
+    <%= f.number_field :localtrabalho %>
+  </div>
+
+
+
+</div>
+
+<div class="col-lg-6">
+  <legend>Localizaçao</legend>
+  <div class="field">
+    <%= f.label "Endereço" %><br>
+    <%= f.text_field :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label "Bairro" %><br>
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label "Numero" %><br>
+    <%= f.text_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label "Cidade" %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label "Estado" %><br>
+    <%= f.text_field :uf %>
+  </div>
+  <div class="field">
+    <label>CEP</label><br>
+    <%= f.text_field :cep %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Telefone Trabalho" %><br>
+    <%= f.text_field :fonetrab %>
+  </div>
+  <div class="field">
+    <%= f.label "Ramal" %><br>
+    <%= f.text_field :fonetrabramal %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :funcao %><br>
+    <%= f.text_field :funcao %>
+  </div>
+
+  <div class="field">
+    <%= f.label :falertesquadrao %><br>
+    <%= f.number_field :falertesquadrao %>
+  </div>
+
+
+
+
+<div class="field">
+    <%= f.label :login %><br>
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :secao %><br>
+    <%= f.text_field :secao %>
+  </div>
+
+<div class="field">
+    <%= f.label :obs %><br>
+    <%= f.text_area :obs %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Incluir Militar", :class => 'btn btn-success', :style => 'color:white;' %>
+    <%= link_to 'Voltar', people_path, :class => 'btn btn-warning', :style => 'color:white;' %>
+  </div>
+<% end %>
+</div>

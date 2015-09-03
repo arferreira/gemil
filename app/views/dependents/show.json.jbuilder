@@ -1,0 +1,1 @@
+json.extract! @dependent, :id, :pesdepnome, :pesdepgrau, :pesdepsexo, :pesdepdn, :pescodigo, :pesdepboletimnum, :pesdepboletimdata, :pesdepompub, :pesdepradionum, :pesdepradiodata, :pesdepirrf, :pesdeptiposaram, :pesdeptipo, :pesdepuser, :pesdepdatacad, :pesdepid, :pesdeppesid, :pesdepdatacas, :pes_cracha_id, :pes_cracha_val, :created_at, :updated_at

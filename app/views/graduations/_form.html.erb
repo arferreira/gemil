@@ -1,0 +1,65 @@
+<%= form_for(@graduation) do |f| %>
+  <% if @graduation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@graduation.errors.count, "error") %> prohibited this graduation from being saved:</h2>
+
+      <ul>
+      <% @graduation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pgdesc %><br>
+    <%= f.text_field :pgdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :pgabrev %><br>
+    <%= f.text_field :pgabrev %>
+  </div>
+  <div class="field">
+    <%= f.label :pgabrevtdp %><br>
+    <%= f.text_field :pgabrevtdp %>
+  </div>
+  <div class="field">
+    <%= f.label :pgrefeitorio %><br>
+    <%= f.number_field :pgrefeitorio %>
+  </div>
+  <div class="field">
+    <%= f.label :pggrupo1 %><br>
+    <%= f.number_field :pggrupo1 %>
+  </div>
+  <div class="field">
+    <%= f.label :pggrupotdp %><br>
+    <%= f.number_field :pggrupotdp %>
+  </div>
+  <div class="field">
+    <%= f.label :pgclasse %><br>
+    <%= f.number_field :pgclasse %>
+  </div>
+  <div class="field">
+    <%= f.label :pgid %><br>
+    <%= f.number_field :pgid %>
+  </div>
+  <div class="field">
+    <%= f.label :pggrupo2 %><br>
+    <%= f.number_field :pggrupo2 %>
+  </div>
+  <div class="field">
+    <%= f.label :pgpronome %><br>
+    <%= f.text_field :pgpronome %>
+  </div>
+  <div class="field">
+    <%= f.label :pgpronome2 %><br>
+    <%= f.text_field :pgpronome2 %>
+  </div>
+  <div class="field">
+    <%= f.label :pgabrev1 %><br>
+    <%= f.text_field :pgabrev1 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

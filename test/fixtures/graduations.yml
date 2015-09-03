@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pgdesc: MyString
+  pgabrev: MyString
+  pgabrevtdp: MyString
+  pgrefeitorio: 1
+  pggrupo1: 1
+  pggrupotdp: 1
+  pgclasse: 1
+  pgid: 1
+  pggrupo2: 1
+  pgpronome: MyString
+  pgpronome2: MyString
+  pgabrev1: MyString
+
+two:
+  pgdesc: MyString
+  pgabrev: MyString
+  pgabrevtdp: MyString
+  pgrefeitorio: 1
+  pggrupo1: 1
+  pggrupotdp: 1
+  pgclasse: 1
+  pgid: 1
+  pggrupo2: 1
+  pgpronome: MyString
+  pgpronome2: MyString
+  pgabrev1: MyString
