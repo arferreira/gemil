@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Portao nome:</strong>
+  <%= @gate.portao_nome %>
+</p>
+
+<p>
+  <strong>Portao nivel acesso:</strong>
+  <%= @gate.portao_nivel_acesso %>
+</p>
+
+<p>
+  <strong>Portao ativo:</strong>
+  <%= @gate.portao_ativo %>
+</p>
+
+<p>
+  <strong>Portao:</strong>
+  <%= @gate.portao_id %>
+</p>
+
+<p>
+  <strong>Portao tipo:</strong>
+  <%= @gate.portao_tipo %>
+</p>
+
+<%= link_to 'Edit', edit_gate_path(@gate) %> |
+<%= link_to 'Back', gates_path %>

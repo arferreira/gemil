@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gate_ips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Portao ip</th>
+      <th>Portao biga</th>
+      <th>Portao nome</th>
+      <th>Portao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gate_ips.each do |gate_ip| %>
+      <tr>
+        <td><%= gate_ip.portao_ip %></td>
+        <td><%= gate_ip.portao_biga %></td>
+        <td><%= gate_ip.portao_nome %></td>
+        <td><%= gate_ip.portao_id %></td>
+        <td><%= link_to 'Show', gate_ip %></td>
+        <td><%= link_to 'Edit', edit_gate_ip_path(gate_ip) %></td>
+        <td><%= link_to 'Destroy', gate_ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gate ip', new_gate_ip_path %>

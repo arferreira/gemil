@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  portao_nome: MyString
+  portao_nivel_acesso: 1
+  portao_ativo: false
+  portao_id: 1
+  portao_tipo: 1
+
+two:
+  portao_nome: MyString
+  portao_nivel_acesso: 1
+  portao_ativo: false
+  portao_id: 1
+  portao_tipo: 1

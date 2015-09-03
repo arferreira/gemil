@@ -1,0 +1,33 @@
+<%= form_for(@gate_ip) do |f| %>
+  <% if @gate_ip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gate_ip.errors.count, "error") %> prohibited this gate_ip from being saved:</h2>
+
+      <ul>
+      <% @gate_ip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :portao_ip %><br>
+    <%= f.text_field :portao_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :portao_biga %><br>
+    <%= f.check_box :portao_biga %>
+  </div>
+  <div class="field">
+    <%= f.label :portao_nome %><br>
+    <%= f.text_field :portao_nome %>
+  </div>
+  <div class="field">
+    <%= f.label :portao_id %><br>
+    <%= f.number_field :portao_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

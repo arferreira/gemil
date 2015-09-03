@@ -29,7 +29,7 @@ class DependentsController < ApplicationController
 
     respond_to do |format|
       if @dependent.save
-        format.html { redirect_to @dependent, notice: 'Dependent was successfully created.' }
+        format.html { redirect_to @dependent, notice: 'Incluido com Sucesso!' }
         format.json { render :show, status: :created, location: @dependent }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class DependentsController < ApplicationController
   def update
     respond_to do |format|
       if @dependent.update(dependent_params)
-        format.html { redirect_to @dependent, notice: 'Dependent was successfully updated.' }
+        format.html { redirect_to @dependent, notice: 'Atualizado com sucesso!' }
         format.json { render :show, status: :ok, location: @dependent }
       else
         format.html { render :edit }

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  portao_ip: MyString
+  portao_biga: false
+  portao_nome: MyString
+  portao_id: 1
+
+two:
+  portao_ip: MyString
+  portao_biga: false
+  portao_nome: MyString
+  portao_id: 1

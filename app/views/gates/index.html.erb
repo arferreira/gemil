@@ -1,0 +1,140 @@
+<div class="container-fluid">
+<br />
+<% if notice%>
+<p id="notice" class="alert alert-warning"><%= notice %></p>
+<% end %>
+  <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> ENTRADAS DE ACESSO</h3>
+                            </div>
+                            <div class="panel-body">
+
+<p id="notice"><%= notice %></p>
+<fieldset style="margin-left:10PX; margin-top:10PX; margin-right:10PX; border-color:#000000">
+<legend align="left">CADASTRO DE ENTRADAS</legend>
+            <table align="LEFT"> 
+        <TR>
+          <td>Nome:</TD>
+          <TD>
+                    <INPUT Type="text" name="portao_nome" onKeyDown="if(event.keyCode==13) event.keyCode=9;" STYLE="width:250; height:30px; font-size:12px">&nbsp; 
+                    
+                    </TD>
+        </TR>
+                <TR>
+                  <td valign="top">Tipo :</TD>
+                    <TD>
+                    <label id="acesso1"><INPUT Type="radio" name="portao_tipo" onKeyDown="if(event.keyCode==13) event.keyCode=9;" value="1" checked>Administrativo</label>
+                    <label id="acesso3"><INPUT Type="radio" name="portao_tipo" onKeyDown="if(event.keyCode==13) event.keyCode=9;" value="3">Operacional</label>
+                    <label id="acesso2"><INPUT Type="radio" name="portao_tipo" onKeyDown="if(event.keyCode==13) event.keyCode=9;" value="2">Residencial</label>
+                  </TD>
+        </TR>
+                <TR>
+                  <td  valign="top">Credencial :</TD>
+                    <TD>
+                      <table>
+                        <TR>
+            
+            <TD valign="middle"><input type="radio" name="portao_nivel_acesso" value="1" class="Borda0" checked onKeyDown="if(event.keyCode==13) event.keyCode=9;"><img src="http://10.152.16.34/sims/img/c_verde.jpg" width="100" height="20" border="0" alt="">&nbsp;ADMINISTRATIVA</TD>
+            <TD><input type="radio" name="portao_nivel_acesso" value="11" class="Borda0" onKeyDown="if(event.keyCode==13) event.keyCode=9;"><img src="http://10.152.16.34/sims/img/c_verde.jpg" width="50" height="20" border="0" alt=""><img src="http://10.152.16.34/sims/img/c_vermelho.jpg" width="50" height="20" border="0" alt="">&nbsp;ADMINISTRATIVA + OPERACIONAL</TD>
+          </TR>
+          <TR>
+            
+            <TD valign="middle"><input type="radio" name="portao_nivel_acesso" value="3" onKeyDown="if(event.keyCode==13) event.keyCode=9;" class="Borda0"><img src="http://10.152.16.34/sims/img/c_vermelho.jpg" width="100" height="20" border="0" alt="">&nbsp;OPERACIONAL</TD>
+            <TD valign="middle"><input type="radio" name="portao_nivel_acesso" value="12" class="Borda0" onKeyDown="if(event.keyCode==13) event.keyCode=9;"><img src="http://10.152.16.34/sims/img/c_verde.jpg" width="50" height="20" border="0" alt=""><img src="http://10.152.16.34/sims/img/c_azul.jpg" width="50" height="20" border="0" alt="">&nbsp;ADMINISTRATIVA + RESIDENCIAL</TD>
+          </TR>
+          <TR>
+            
+            <TD valign="middle"><input type="radio" name="portao_nivel_acesso" value="6" onKeyDown="if(event.keyCode==13) event.keyCode=9;" class="Borda0"><img src="http://10.152.16.34/sims/img/c_azul.jpg" width="100" height="20" border="0" alt="">&nbsp;RESIDENCIAL</TD>
+            <TD valign="middle"><input type="radio" name="portao_nivel_acesso" value="13" class="Borda0" onKeyDown="if(event.keyCode==13) event.keyCode=9;"><img src="http://10.152.16.34/sims/img/c_vermelho.jpg" width="50" height="20" border="0" alt=""><img src="http://10.152.16.34/sims/img/c_azul.jpg" width="50" height="20" border="0" alt="">&nbsp;OPERACIONAL + RESIDENCIAL</TD>
+          </TR>
+          <TR>
+            
+            <TD valign="middle"><input type="radio" name="portao_nivel_acesso" value="5" onKeyDown="if(event.keyCode==13) event.keyCode=9;" class="Borda0"><img src="http://10.152.16.34/sims/img/c_preto.jpg" width="100" height="20" border="0" alt="">&nbsp;TODAS</TD>
+            
+          </TR>
+                        </table>
+                    </TD>
+                </TR>
+                <TD><INPUT Type="submit" Value="Incluir" name="Submit" class="btn btn-success"></TD>
+</table><br />
+<hr />
+<table class="table table-bordered table-hover table-striped" style="margin-top:40px; float:left">
+  <hr />
+  <thead>
+    <tr>
+      <th>Nome Entrada</th>
+      <th>Tipo</th>
+      <th>Credencial</th>
+      <th>Portao</th>
+      <th>Portao tipo</th>
+      <th colspan="4"><center>Açoes</center></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gates.each do |gate| %>
+      <tr>
+        <% 
+
+        # valida tipo portao
+        if gate.portao_tipo == 1 
+          @tipo = "ADMINISTRAVIVO"
+        elsif gate.portao_tipo == 2
+          @tipo = "RESIDENCIAL"
+        elsif gate.portao_tipo == 3
+          @tipo = "OPERACIONAL"
+        end
+        puts "Nivel acesso portao: #{gate.portao_nivel_acesso}"
+        #valida credencial
+        
+        if gate.portao_nivel_acesso == 1
+          @credencial = 'http://10.152.16.34/sims/img/c_verde.jpg'
+        elsif gate.portao_nivel_acesso == 2
+          @credencial = 'http://10.152.16.34/sims/img/c_laranja.jpg'
+        elsif gate.portao_nivel_acesso == 3
+          @credencial = 'http://10.152.16.34/sims/img/c_vermelho.jpg'
+        elsif gate.portao_nivel_acesso == 4
+          @credencial = 'http://10.152.16.34/sims/img/c_amarelo.jpg'
+        elsif gate.portao_nivel_acesso == 5
+          @credencial = 'http://10.152.16.34/sims/img/c_preto.jpg'
+          
+        elsif gate.portao_nivel_acesso == 6
+          @credencial = 'http://10.152.16.34/sims/img/c_azul.jpg'
+        elsif gate.portao_nivel_acesso == 11
+          @credencial = 'http://10.152.16.34/sims/img/c_verde.jpg'
+          @credencial1 = 'http://10.152.16.34/sims/img/c_vermelho.jpg'
+
+        elsif gate.portao_nivel_acesso == 12
+          @credencial = 'http://10.152.16.34/sims/img/c_verde.jpg'
+          @credencial1 = 'http://10.152.16.34/sims/img/c_azul.jpg'
+        elsif gate.portao_nivel_acesso == 13
+          @credencial =  'http://10.152.16.34/sims/img/c_vermelho.jpg'
+          @credencial1 = 'http://10.152.16.34/sims/img/c_verde.jpg'
+        end                            
+
+          %>
+        <td><%= gate.portao_nome %></td>
+        <td><%= @tipo %></td>
+        <td>
+          <img src="<%= @credencial %>"> 
+          <% if @credencial1  %>
+          <img src="<%= @credencial1 %>"> 
+          <% end %>
+        </td>
+        <td><%= gate.portao_id %></td>
+        <td><%= gate.portao_tipo %></td>
+        <td><%= link_to 'Exibir', gate %></td>
+        <td><%= link_to 'Editar', edit_gate_path(gate) %></td>
+        <% contagem_ip = GateIp.where(:portao_id => gate.portao_id).count %>
+        <td><%= link_to 'IPs', gates_path %>|(<%= contagem_ip %>)</td>
+        <td><%= link_to 'Excluir', gates_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

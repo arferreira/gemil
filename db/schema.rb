@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902192204) do
+ActiveRecord::Schema.define(version: 20150903144422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20150902192204) do
     t.date     "pesdepdatacas"
     t.integer  "pes_cracha_id"
     t.date     "pes_cracha_val"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "frames", force: :cascade do |t|
@@ -46,6 +46,25 @@ ActiveRecord::Schema.define(version: 20150902192204) do
     t.string   "quadroabrev"
     t.integer  "quadrogrupo"
     t.integer  "quadroid",    default: "nextval('frames_id_seq'::regclass)"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gate_ips", force: :cascade do |t|
+    t.string   "portao_ip"
+    t.boolean  "portao_biga"
+    t.string   "portao_nome"
+    t.integer  "portao_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "gates", force: :cascade do |t|
+    t.string   "portao_nome"
+    t.integer  "portao_nivel_acesso"
+    t.boolean  "portao_ativo"
+    t.integer  "portao_id",           default: "nextval('gates_id_seq'::regclass)"
+    t.integer  "portao_tipo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

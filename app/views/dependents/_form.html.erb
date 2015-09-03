@@ -10,88 +10,94 @@
       </ul>
     </div>
   <% end %>
-
+<div class="col-lg-6">
+  <legend>DADOS PESSOAIS</legend>
   <div class="field">
-    <%= f.label :pesdepnome %><br>
+    <%= f.label "Nome Completo" %><br>
     <%= f.text_field :pesdepnome %>
   </div>
   <div class="field">
-    <%= f.label :pesdepgrau %><br>
+    <%= f.label "Grau Dependência" %><br>
     <%= f.number_field :pesdepgrau %>
   </div>
   <div class="field">
-    <%= f.label :pesdepsexo %><br>
+    <%= f.label "Sexo" %><br>
     <%= f.text_field :pesdepsexo %>
   </div>
   <div class="field">
-    <%= f.label :pesdepdn %><br>
+    <%= f.label "Data de Nascimento" %><br>
     <%= f.date_select :pesdepdn %>
   </div>
   <div class="field">
-    <%= f.label :pescodigo %><br>
+    <%= f.label "Saram do Responsável" %><br>
     <%= f.text_field :pescodigo %>
   </div>
   <div class="field">
-    <%= f.label :pesdepboletimnum %><br>
+    <%= f.label "Número de Boletim" %><br>
     <%= f.text_field :pesdepboletimnum %>
   </div>
   <div class="field">
-    <%= f.label :pesdepboletimdata %><br>
+    <%= f.label "Data do Boletim" %><br>
     <%= f.date_select :pesdepboletimdata %>
   </div>
   <div class="field">
-    <%= f.label :pesdepompub %><br>
+    <%= f.label "OM da Publicação" %><br>
     <%= f.number_field :pesdepompub %>
   </div>
   <div class="field">
-    <%= f.label :pesdepradionum %><br>
+    <%= f.label "Número Rádio" %><br>
     <%= f.text_field :pesdepradionum %>
   </div>
   <div class="field">
-    <%= f.label :pesdepradiodata %><br>
+    <%= f.label "Data Rádio" %><br>
     <%= f.date_select :pesdepradiodata %>
   </div>
   <div class="field">
-    <%= f.label :pesdepirrf %><br>
+    <%= f.label "IRRF" %><br>
     <%= f.number_field :pesdepirrf %>
   </div>
+</div>
+<div class="col-lg-6">
+  <legend>DADOS COMPLEMENTARES</legend>
   <div class="field">
-    <%= f.label :pesdeptiposaram %><br>
+    <%= f.label "Tipo Saram" %><br>
     <%= f.text_field :pesdeptiposaram %>
   </div>
   <div class="field">
-    <%= f.label :pesdeptipo %><br>
+    <%= f.label "Tipo Dependente" %><br>
     <%= f.text_field :pesdeptipo %>
   </div>
   <div class="field">
-    <%= f.label :pesdepuser %><br>
+    <%= f.label "User" %><br>
     <%= f.number_field :pesdepuser %>
   </div>
   <div class="field">
-    <%= f.label :pesdepdatacad %><br>
+    <%= f.label "Data Cadastro" %><br>
     <%= f.date_select :pesdepdatacad %>
   </div>
   <div class="field">
-    <%= f.label :pesdepid %><br>
+    <%= f.label "Identidade" %><br>
     <%= f.number_field :pesdepid %>
   </div>
   <div class="field">
-    <%= f.label :pesdeppesid %><br>
+    <%= f.label "Crachá" %><br>
     <%= f.number_field :pesdeppesid %>
   </div>
   <div class="field">
-    <%= f.label :pesdepdatacas %><br>
+    <%= f.label "Data Casamento" %><br>
     <%= f.date_select :pesdepdatacas %>
   </div>
   <div class="field">
-    <%= f.label :pes_cracha_id %><br>
+    <%= f.label "Cracha Dependente" %><br>
     <%= f.number_field :pes_cracha_id %>
   </div>
   <div class="field">
-    <%= f.label :pes_cracha_val %><br>
+    <%= f.label "Validade Crachá" %><br>
     <%= f.date_select :pes_cracha_val %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+<div class="actions">
+    <%= f.submit "Incluir Dependente", :class => 'btn btn-success', :style => 'color:white;' %>
+    <%= link_to 'Voltar', dependents_path, :class => 'btn btn-warning', :style => 'color:white;' %>
   </div>
 <% end %>
+</div>

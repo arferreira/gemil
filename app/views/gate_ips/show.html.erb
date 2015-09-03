@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Portao ip:</strong>
+  <%= @gate_ip.portao_ip %>
+</p>
+
+<p>
+  <strong>Portao biga:</strong>
+  <%= @gate_ip.portao_biga %>
+</p>
+
+<p>
+  <strong>Portao nome:</strong>
+  <%= @gate_ip.portao_nome %>
+</p>
+
+<p>
+  <strong>Portao:</strong>
+  <%= @gate_ip.portao_id %>
+</p>
+
+<%= link_to 'Edit', edit_gate_ip_path(@gate_ip) %> |
+<%= link_to 'Back', gate_ips_path %>
